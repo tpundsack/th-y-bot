@@ -10,8 +10,14 @@ local fmt = string.format
 local http = require('coro-http')
 local json = require('json')
 local mutex = discordia.Mutex()
+local token = require "tokens/th-y"
 
 mods = require "data/mods"
 
---to be finished
+client:on("messageCreate", function(message)
+    for i, k in pairs(mods) do
+        if k.messageCreate then k.messageCreate(message) end
+      end
+    end)
 
+client:run(token)
