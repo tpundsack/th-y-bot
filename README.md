@@ -1,5 +1,6 @@
 # th-y-bot
 Bot for a discord server.
 
-[Discordia Wiki](https://github.com/SinisterRectus/Discordia/wiki)
+Useful Resources:</br>
+[Discordia Wiki](https://github.com/SinisterRectus/Discordia/wiki) and
 [Lua-users Wiki](http://lua-users.org/wiki/)
