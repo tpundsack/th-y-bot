@@ -10,7 +10,7 @@ local fmt = string.format
 local http = require('coro-http')
 local json = require('json')
 local mutex = discordia.Mutex()
-local token = require "tokens/th-y"
+local token = require "th-y_t"
 
 mods = require "data/mods"
 
