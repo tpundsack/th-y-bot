@@ -1,7 +1,24 @@
 local discordia = require "discordia"
+local client = discordia.client
+--enables discordia extensions
+discordia.extensions()
+--definitions
+local enums = discordia.enums
+local class = discordia.class
+local fmt = string.format
+--extras
+local http = require('coro-http')
+local json = require('json')
+local mutex = discordia.Mutex()
+local token = require "th-y_t"
 
-mods = require "data/modulo"
-for i, k in pairs(mods)
-  if k.init then k.init() end
-end
---to be finished
+
+mods = require "data/mods"
+
+client:on("messageCreate", function(message)
+    for i, k in pairs(mods) do
+        if k.messageCreate then k.messageCreate(message) end
+      end
+    end)
+
+client:run(token)
