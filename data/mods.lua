@@ -1,5 +1,5 @@
 local mods = {}
 
-mods.core = require "data/modules/core"
+mods.demo = require "data/modules/demo"
 
 return mods
