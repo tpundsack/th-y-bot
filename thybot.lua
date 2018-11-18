@@ -14,6 +14,9 @@ local token = require "th-y_t"
 
 
 mods = require "data/mods"
+    for i, k in pairs(mods) do
+        if k.init then k.init(client) end
+      end
 
 client:on("messageCreate", function(message)
     for i, k in pairs(mods) do
