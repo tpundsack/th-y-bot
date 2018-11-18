@@ -1,5 +1,5 @@
 local discordia = require "discordia"
-local client = discordia.client
+local client = discordia.Client()
 --enables discordia extensions
 discordia.extensions()
 --definitions
